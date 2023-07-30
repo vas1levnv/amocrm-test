@@ -1,0 +1,31 @@
+@import "./assets/css/_vars.scss";
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 320px;
+  min-height: 100vh;
+  color: $light-text;
+  background: $black;
+  font-family: 'Inter', sans-serif;
+}
+
+main {
+  flex: 1 1 0;
+}
+
+.container {
+  max-width: 1157px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+a {
+  transition: $tr;
+
+  &:hover {
+    color: orange;
+  }
+}
+

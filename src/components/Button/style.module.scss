@@ -1,0 +1,12 @@
+@import "../../../src/assets/css/vars";
+
+.btn {
+  background: $blue;
+  padding: 21px 35px;
+  font-weight: 500;
+  transition: $tr;
+
+  &:hover {
+    background: #1a3b81;
+  }
+}

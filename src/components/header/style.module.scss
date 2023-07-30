@@ -1,0 +1,115 @@
+@import "../../../src/assets/css/vars";
+
+.header {
+  background: $black;
+  position: sticky;
+  top: 0;
+  font-size: 12px;
+  font-weight: 500;
+  z-index: 1000;
+}
+
+.header.scrollHeader{
+  display: none;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.logo {
+  &Text {
+    margin-top: 10px;
+    font-size: 10px;
+    font-family: $montserrat;
+    max-width: 135px;
+    font-weight: 300;
+  }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 -8px;
+}
+
+.item {
+  padding: 8px;
+
+
+  &:last-child {
+    display: none;
+  }
+}
+
+.logo, .socials, .phone {
+  display: none;
+}
+
+@media (min-width: $xl) {
+
+  .header {
+    font-size: 16px;
+    background: transparent;
+  }
+
+  .wrapper {
+    justify-content: space-between;
+    padding: 47px 0 20px;
+    align-items: start;
+    margin-right: -10px;
+  }
+
+  .logo {
+    display: block;
+    padding: 8px 0;
+  }
+
+
+
+  .list {
+    width: auto;
+    flex: 1 1 0;
+    margin: 0 0 0 37px;
+  }
+
+  .item {
+    & a {
+      padding: 10px 15px;
+    }
+
+    &:last-child {
+      display: block;
+    }
+  }
+
+  .phone {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .socials {
+    display: flex;
+    margin-left: 37px;
+    & li {
+      margin-left: 20px;
+
+      &:first-child{
+        margin-left: 0;
+      }
+
+      & a {
+        display: block;
+        padding: 10px;
+        & img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+
+}

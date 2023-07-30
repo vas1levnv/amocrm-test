@@ -1,0 +1,266 @@
+@import "../../../src/assets/css/vars";
+
+.mainContent {
+  overflow: hidden;
+  position: relative;
+}
+
+.wrapper {
+  padding: 40px 0 55px;
+  position: relative;
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 5;
+}
+
+.title {
+  font-size: 36px;
+  max-width: min-content;
+}
+
+.gradient {
+  background: -webkit-linear-gradient(0deg, #FCB045, #FF3F78);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  line-height: 100%;
+}
+
+.firstContent {
+  &Text {
+    margin-top: 15px;
+    font-family: $montserrat;
+    font-size: 18px;
+    max-width: 275px;
+  }
+}
+
+.secondContent {
+  margin-top: 45px;
+
+  &Title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+.shortList {
+  margin-top: 20px;
+  font-family: $montserrat;
+  font-size: 13px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 14px;
+  text-transform: uppercase;
+
+  & li {
+    position: relative;
+    padding-left: 15px;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 1px;
+      background: linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%);
+      position: absolute;
+      top: 50%;
+      left: 0;
+    }
+  }
+}
+
+.fullList {
+  display: none;
+}
+
+.btn {
+  display: none;
+  margin-top: 60px;
+}
+
+.purpleLight {
+  position: absolute;
+  top: 50%;
+  right: -15%;
+  width: 259px;
+  height: 259px;
+  border-radius: 50%;
+  opacity: 0.5;
+  background: #833AB4;
+  transform: translate(0, -40%);
+  filter: blur(196px);
+}
+
+.redLight {
+  position: absolute;
+  top: 70%;
+  left: -15%;
+  width: 211px;
+  height: 210px;
+  border-radius: 50%;
+  opacity: 1;
+  background: #961A1A;
+  transform: translate(0, -40%);
+  filter: blur(196px);
+}
+
+.yellowLight {
+  position: absolute;
+  top: 135%;
+  left: -15%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  opacity: 0.4;
+  background: #FCB045;
+  transform: translate(0, -40%);
+  filter: blur(196px);
+}
+
+.glass {
+  position: absolute;
+  top: 0;
+  left: -15%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  opacity: 0.5;
+  background: white;
+  transform: translate(0, -40%);
+  filter: blur(120px);
+}
+
+.redBall {
+  position: absolute;
+  bottom: -3%;
+  left: 2%;
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(3px 6px 27px rgba(223, 125, 125, 0.25));
+  backdrop-filter: blur(2px);
+}
+
+.purpleBall {
+  position: absolute;
+  bottom: 38%;
+  right: -10%;
+  width: 40px;
+  height: 40px;
+}
+
+.bigBall {
+  display: none;
+}
+
+@media (min-width: $xl) {
+
+  .mainContent {
+    padding: 70px 0 70px;
+    overflow: initial;
+  }
+
+  .contentWrapper {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .firstContent {
+    &Text {
+      margin-top: 30px;
+    }
+  }
+
+  .secondContent {
+    margin-top: 0;
+    text-align: right;
+  }
+
+  .shortList {
+    display: none;
+  }
+
+  .fullList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+    gap: 30px;
+
+    & li {
+      max-width: 135px;
+    }
+
+    &Title {
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    &Text {
+      margin-top: 6px;
+      color: $dark-gray;
+      font-family: $montserrat;
+    }
+  }
+
+  .btn {
+    display: block;
+  }
+
+  .purpleLight {
+    top: -25%;
+    right: 40%;
+  }
+
+  .redLight {
+    top: 45%;
+    left: -20%;
+  }
+
+  .yellowLight {
+    display: none;
+  }
+
+  .glass {
+    display: none;
+  }
+
+  .redBall {
+    position: absolute;
+    bottom: 15%;
+    left: auto;
+    right: 35%;
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(3px 6px 27px rgba(223, 125, 125, 0.25));
+    backdrop-filter: blur(2px);
+  }
+
+  .purpleBall {
+    bottom: auto;
+    top: -50%;
+    right: 28%;
+    width: 100px;
+    height: 100px;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  .bigBall {
+    display: block;
+    position: absolute;
+    top: -29%;
+    left: 37%;
+    transform: scale(2);
+    z-index: 1;
+  }
+
+}
